@@ -26,7 +26,7 @@ npm install multer
 ## commands and steps to push teh code to git repo
 ```javascript
 git init
-git add README.md
+git add .
 git commit -m "first commit"
 git branch -M main
 git remote add origin https://github.com/AratiCoding/MERN-E-commerce.git
