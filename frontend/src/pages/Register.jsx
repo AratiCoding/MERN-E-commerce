@@ -67,7 +67,7 @@ function Register() {
 
           <button 
             type="submit"
-            className="w-full bg-purple-900 hover:bg-purple-800 text-white font-semibold py-3 rounded-lg transition-colors duration-200 shadow-md mt-2"
+            className="w-full bg-purple-900 hover:bg-purple-800 text-white font-semibold py-3 rounded-sm transition-colors duration-200 shadow-md mt-2"
           >
             Create Account
           </button>

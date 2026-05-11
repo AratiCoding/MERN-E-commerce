@@ -42,4 +42,6 @@ npm install react-infinite-scroll-component
 npm install swiper
 
 npm install react-toastify
+
+npm install react-icons
 ```

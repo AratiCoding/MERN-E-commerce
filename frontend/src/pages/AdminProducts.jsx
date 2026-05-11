@@ -136,14 +136,14 @@ const [loading, setLoading] = useState(true);
   return (
     <div>
   <div className="flex justify-between items-center mb-4">
-  <h2 className="text-xl">Products Management</h2>
+  <h2 className="text-2xl mb-4">Products Management</h2>
 
   <button
      onClick={() => {
   resetForm(); 
   setIsModalOpen(true);
 }}
-    className="bg-violet-900 text-white px-4 py-2 rounded-md"
+    className="bg-violet-900 text-white px-4 py-2 rounded-sm"
   >
      + Add Product
   </button>
@@ -154,31 +154,31 @@ const [loading, setLoading] = useState(true);
       <table className="w-full border text-center">
         <thead>
           <tr className="bg-gray-200">
-            <th>Name</th>
-            <th>Image</th>
-            <th>Category</th>
-            <th>Price</th>
-            <th>Actions</th>
+            <th className="p-2 border">Name</th>
+            <th className="p-2 border">Image</th>
+            <th className="p-2 border">Category</th>
+            <th className="p-2 border">Price</th>
+            <th className="p-2 border">Actions</th>
           </tr>
         </thead>
 
         <tbody>
           {products.map((p) => (
             <tr key={p._id}>
-              <td>{p.name}</td>
+              <td className="p-2 border">{p.name}</td>
 
-              <td>
+              <td className="p-2 border">
                 <img
                    src={`http://localhost:5000${p.image}`}
                   className="w-16 h-16 object-cover mx-auto rounded-md"
                 />
               </td>
 
-              <td>{p.category?.name}</td>
+              <td className="p-2 border">{p.category?.name}</td>
 
-              <td>₹{p.price}</td>
+              <td className="p-2 border">₹{p.price}</td>
 
-              <td className="space-x-2">
+              <td className="space-x-2 border">
                 <button
                   onClick={() => handleEdit(p)}
                   className="px-2"
@@ -298,14 +298,14 @@ const [loading, setLoading] = useState(true);
               />
 
      <div className="grid grid-cols-2 gap-4">
- <button className="bg-violet-900 text-white p-2 rounded-md">
+ <button className="bg-violet-900 text-white p-2 rounded-sm">
                 {editingId ? "Update" : "Add"}
               </button>
 
               <button
                 type="button"
                 onClick={() => setIsModalOpen(false)}
-                className="bg-gray-400 text-white p-2 rounded-md"
+                className="bg-gray-400 text-white p-2 rounded-sm"
               >
                 Cancel
               </button>

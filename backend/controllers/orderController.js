@@ -28,7 +28,7 @@ const createOrder = async (req, res) => {
 
 // GET ALL ORDERS (ADMIN)
 const getOrders = async (req, res) => {
-  const orders = await Order.find().populate("user", "name email");
+  const orders = await Order.find().populate("user", "_id name email");
   res.json(orders);
 };
 

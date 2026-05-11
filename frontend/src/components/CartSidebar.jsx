@@ -98,7 +98,7 @@ const navigate = useNavigate();
 
         <button
           onClick={() => dispatch(decreaseQty(item._id))}
-          className="bg-gray-300 px-2 rounded"
+          className="bg-gray-300 px-2 rounded-sm"
         >
           -
         </button>
@@ -107,7 +107,7 @@ const navigate = useNavigate();
 
         <button
           onClick={() => dispatch(increaseQty(item._id))}
-          className="bg-gray-300 px-2 rounded"
+          className="bg-gray-300 px-2 rounded-sm"
         >
           +
         </button>
@@ -142,7 +142,7 @@ const navigate = useNavigate();
     onClose();
     navigate("/checkout");
   }}
-          className="w-full bg-violet-900 text-white py-2 rounded">
+          className="w-full bg-violet-900 text-white py-2 rounded-sm">
             Checkout
           </button>
         </div>

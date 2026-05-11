@@ -47,7 +47,7 @@ function ProductCard({ product }) {
         <button
           onClick={handleAddToCart}
           disabled={isInCart}
-          className={`mt-2 px-3 py-1 text-white rounded-md ${
+          className={`mt-2 px-3 py-1 text-white rounded-sm ${
             isInCart ? "bg-green-500 cursor-not-allowed" : "bg-violet-900"
           }`}
         >
@@ -87,7 +87,7 @@ function ProductCard({ product }) {
             <button
               onClick={handleAddToCart}
               disabled={isInCart}
-              className={`mt-2 px-3 py-1 text-white rounded-md ${
+              className={`mt-2 px-3 py-1 text-white rounded-sm ${
             isInCart ? "bg-green-500 cursor-not-allowed" : "bg-violet-900"
           }`}
             >

@@ -72,7 +72,7 @@ if (loading) {
 };
   return (
   <div>
-    <h2 className="text-xl mb-4">User Management</h2>
+    <h2 className="text-2xl mb-4">User Management</h2>
 
     <table className="w-full border border-gray-300">
       <thead className="bg-gray-200">

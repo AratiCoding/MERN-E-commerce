@@ -3,8 +3,9 @@ import API from "../services/api";
 import { useState } from "react";
 import { toast } from "react-toastify";
 import { clearCart } from "../features/cartSlice";
-
+import { useNavigate } from "react-router-dom";
 function Checkout() {
+  const navigate = useNavigate();
   const { cartItems } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
 
@@ -52,7 +53,21 @@ function Checkout() {
       await API.post("/orders", orderData);
 
       toast.success("Order placed successfully");
+        setForm({
+      name: "",
+      phone: "",
+      address: "",
+      address2: "",
+      city: "",
+      state: "",
+      postalCode: "",
+      country: "India",
+      paymentMethod: "COD",
+    });
+
       dispatch(clearCart());
+
+         navigate("/");
     } catch (error) {
       toast.error("Order failed");
     }
@@ -165,7 +180,7 @@ function Checkout() {
       {/* Button */}
       <button
         onClick={placeOrder}
-        className="w-full bg-violet-900 text-white py-3 rounded"
+        className="w-full bg-violet-900 text-white py-3 rounded-sm"
       >
         Place Order
       </button>

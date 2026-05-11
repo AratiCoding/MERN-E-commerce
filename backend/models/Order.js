@@ -52,7 +52,7 @@ paymentMethod: {
 },
 orderStatus: {
   type: String,
-  default: "Pending", // Pending, Shipped, Delivered
+  default: "Pending", 
 },
 
 paidAt: Date,

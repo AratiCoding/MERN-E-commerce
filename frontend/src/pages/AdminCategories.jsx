@@ -93,7 +93,7 @@ if (loading) {
   return (
     <div>
      <div className="flex justify-between items-center mb-4">
-  <h2 className="text-xl">Category Management</h2>
+  <h2 className="text-2xl mb-4">Category Management</h2>
 
   <button
     onClick={() => {
@@ -102,7 +102,7 @@ if (loading) {
       setName("");
       setImage(null);
     }}
-    className="bg-violet-900 text-white px-4 py-2 rounded-md"
+    className="bg-violet-900 text-white px-4 py-2 rounded-sm"
   >
     + Create Category
   </button>
@@ -130,14 +130,14 @@ if (loading) {
         />
 
         <div className="flex justify-between">
-          <button className="bg-violet-900 text-white px-4 py-1 rounded-md">
+          <button className="bg-violet-900 text-white px-4 py-1 rounded-sm">
             {editingId ? "Update" : "Create"}
           </button>
 
           <button
             type="button"
             onClick={() => setIsModalOpen(false)}
-            className="bg-gray-500 text-white px-4 py-1 rounded-md"
+            className="bg-gray-500 text-white px-4 py-1 rounded-sm"
           >
             Cancel
           </button>
@@ -156,7 +156,7 @@ if (loading) {
       <div className="flex justify-between">
         <button
           onClick={confirmDelete}
-          className="bg-red-600 text-white px-4 py-2 rounded-md flex"
+          className="bg-red-600 text-white px-4 py-2 rounded-sm flex"
         >
               <svg class="w-5 h-5 text-white mx-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z"/>
@@ -165,7 +165,7 @@ if (loading) {
 
         <button
           onClick={() => setIsDeleteModalOpen(false)}
-          className="bg-gray-400 text-white px-4 py-2 rounded-md"
+          className="bg-gray-400 text-white px-4 py-2 rounded-sm"
         >
           Cancel
         </button>
