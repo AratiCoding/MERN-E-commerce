@@ -1,9 +1,10 @@
 import axios from "axios";
 
-const API = axios.create({
-  baseURL: "https://mern-e-commerce-backend-r2tu.onrender.com/api" || "http://localhost:5000/api",
-});
 
+
+const API = axios.create({
+  baseURL: process.env.REACT_APP_API_URL || "http://localhost:5000/api",
+});
 // Attach token to every request
 API.interceptors.request.use((req) => {
   const user = JSON.parse(localStorage.getItem("user"));
