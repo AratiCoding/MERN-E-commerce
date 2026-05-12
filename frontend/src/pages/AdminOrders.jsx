@@ -26,7 +26,7 @@ function AdminOrders() {
 
   return (
     <div>
-      <h2 className="text-lg md:text-2xl">Orders Management</h2>
+      <h2 className="text-lg md:text-2xl mb-4">Orders Management</h2>
 
       <table className="w-full border text-center">
         <thead>
