@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || "http://localhost:5000/api",
+  baseURL: "https://mern-e-commerce-backend-r2tu.onrender.com/api" || "http://localhost:5000/api",
 });
 
 // Attach token to every request
@@ -10,7 +10,7 @@ API.interceptors.request.use((req) => {
 
   if (user?.token) {
     req.headers.Authorization = `Bearer ${user.token}`;
-  }
+  } 
 
   return req;
 });
