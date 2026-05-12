@@ -44,4 +44,6 @@ npm install swiper
 npm install react-toastify
 
 npm install react-icons
+
+npm install chart.js react-chartjs-2
 ```

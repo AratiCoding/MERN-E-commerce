@@ -22,6 +22,7 @@ const getProducts = async (req, res) => {
     const filter = { ...keyword, ...categoryFilter  };
 
     const count = await Product.countDocuments(filter);
+const total = await Product.countDocuments();
 
     const products = await Product.find(filter)
   .populate("category", "name")
@@ -32,6 +33,7 @@ const getProducts = async (req, res) => {
       products,
       page,
       pages: Math.ceil(count / pageSize),
+       total,
     });
 
   } catch (error) {
