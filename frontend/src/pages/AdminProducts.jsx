@@ -136,7 +136,7 @@ const [loading, setLoading] = useState(true);
   return (
     <div>
   <div className="flex justify-between items-center mb-4">
-  <h2 className="text-2xl mb-4">Products Management</h2>
+  <h2 className="text-lg md:text-2xl">Products Management</h2>
 
   <button
      onClick={() => {
@@ -145,7 +145,7 @@ const [loading, setLoading] = useState(true);
 }}
     className="bg-violet-900 text-white px-4 py-2 rounded-sm"
   >
-     + Add Product
+     + Add
   </button>
 </div>
      
@@ -178,7 +178,7 @@ const [loading, setLoading] = useState(true);
 
               <td className="p-2 border">₹{p.price}</td>
 
-              <td className="space-x-2 border">
+              <td className="p-2 border flex justify-center gap-2">
                 <button
                   onClick={() => handleEdit(p)}
                   className="px-2"

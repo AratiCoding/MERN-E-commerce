@@ -143,7 +143,7 @@ function AdminHome() {
       </div>
 
       {/* USERS LAST 6 MONTHS BAR CHART */}
-      <div className="bg-white mt-8 p-6 rounded-xl shadow">
+      <div className="bg-white mt-8 p-6 rounded-xl shadow hidden sm:block">
         <Bar data={userBarChartData} options={userBarChartOptions} />
       </div>
 

@@ -93,7 +93,7 @@ if (loading) {
   return (
     <div>
      <div className="flex justify-between items-center mb-4">
-  <h2 className="text-2xl mb-4">Category Management</h2>
+  <h2 className="text-lg md:text-2xl">Category Management</h2>
 
   <button
     onClick={() => {
@@ -104,7 +104,7 @@ if (loading) {
     }}
     className="bg-violet-900 text-white px-4 py-2 rounded-sm"
   >
-    + Create Category
+    + Create
   </button>
 </div>
 
