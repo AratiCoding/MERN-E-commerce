@@ -190,7 +190,7 @@ if (loading) {
 
               <td className="p-2 border">
                 <img
-                  src={`http://localhost:5000${cat.image}`}
+                  src={`${process.env.REACT_APP_API_URL.replace("/api", "")}${cat.image}`}
                   className="w-16 h-16 object-cover mx-auto rounded-lg"
                 />
               </td>

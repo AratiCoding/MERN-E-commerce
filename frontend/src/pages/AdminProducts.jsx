@@ -169,7 +169,7 @@ const [loading, setLoading] = useState(true);
 
               <td className="p-2 border">
                 <img
-                   src={`http://localhost:5000${p.image}`}
+                   src={`${process.env.REACT_APP_API_URL.replace("/api", "")}${p.image}`}
                   className="w-16 h-16 object-cover mx-auto rounded-md"
                 />
               </td>

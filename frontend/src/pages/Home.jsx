@@ -184,7 +184,7 @@ function Home() {
               <img
                   src={
                     cat.image
-                      ? `http://localhost:5000${cat.image}`
+                      ? `${process.env.REACT_APP_API_URL.replace("/api", "")}${cat.image}`
                       : "https://via.placeholder.com/100"
                   }
 

@@ -30,11 +30,11 @@ function ProductCard({ product }) {
       <div className="border p-4 rounded shadow">
         {/*  Image Click → Modal */}
         <img
-          src={
-  product.image
-    ? `http://localhost:5000${product.image}`
-    : "https://via.placeholder.com/150"
-}
+        src={
+    product.image
+      ? `${process.env.REACT_APP_API_URL.replace("/api", "")}${product.image}`
+      : "https://via.placeholder.com/150"
+  }
           alt={product.name}
           className="w-full h-40 object-cover cursor-pointer"
           onClick={() => setShowModal(true)}
@@ -68,11 +68,11 @@ function ProductCard({ product }) {
             </button>
 
             <img
-                 src={
-  product.image
-    ? `http://localhost:5000${product.image}`
-    : "https://via.placeholder.com/150"
-}
+  src={
+    product.image
+      ? `${process.env.REACT_APP_API_URL.replace("/api", "")}${product.image}`
+      : "https://via.placeholder.com/150"
+  }
               alt={product.name}
               className="w-full h-48 object-cover mb-3"
             />
