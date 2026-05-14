@@ -32,7 +32,7 @@ function ProductCard({ product }) {
         <img
         src={
     product.image
-      ? `${process.env.REACT_APP_API_URL.replace("/api", "")}${product.image}`
+      ? `${import.meta.env.VITE_API_URL.replace("/api", "")}${product.image}`
       : "https://via.placeholder.com/150"
   }
           alt={product.name}
@@ -70,7 +70,7 @@ function ProductCard({ product }) {
             <img
   src={
     product.image
-      ? `${process.env.REACT_APP_API_URL.replace("/api", "")}${product.image}`
+      ? `${import.meta.env.VITE_API_URL.replace("/api", "")}${product.image}`
       : "https://via.placeholder.com/150"
   }
               alt={product.name}

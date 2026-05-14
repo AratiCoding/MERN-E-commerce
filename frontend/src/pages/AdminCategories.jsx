@@ -190,7 +190,7 @@ if (loading) {
 
               <td className="p-2 border">
                 <img
-                  src={`${process.env.REACT_APP_API_URL.replace("/api", "")}${cat.image}`}
+                  src={`${import.meta.env.VITE_API_URL.replace("/api", "")}${cat.image}`}
                   className="w-16 h-16 object-cover mx-auto rounded-lg"
                 />
               </td>

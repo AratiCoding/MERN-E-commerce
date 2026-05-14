@@ -184,7 +184,7 @@ function Home() {
               <img
                   src={
                     cat.image
-                      ? `${process.env.REACT_APP_API_URL.replace("/api", "")}${cat.image}`
+                      ? `${import.meta.env.VITE_API_URL.replace("/api", "")}${cat.image}`
                       : "https://via.placeholder.com/100"
                   }
 
