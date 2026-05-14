@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { registerUser } from "../services/authService";
 import { useNavigate, Link } from "react-router-dom"; // Added Link
-
+import { toast } from "react-toastify";
 function Register() {
   const [form, setForm] = useState({
     name: "",
@@ -16,10 +16,12 @@ function Register() {
 
     try {
       await registerUser(form);
-      alert("Registered successfully");
+      toast.success("Registered successfully");
+    
       navigate("/login");
     } catch (error) {
-      alert(error.response?.data?.message || "Error");
+      toast.error(error.response?.data?.message || "Error");
+     
     }
   };
 
